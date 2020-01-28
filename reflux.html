@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Reflux</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://cdn.aioneframework.com/assets/css/aione.min.css">
+    <style>
+        body {
+            background-image: url("https://templatemo.com/templates/templatemo_531_reflux/assets/images/page-bg.jpg");
+            background-size: auto;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            line-height: 22px;
+            line-height: 1.5;
+            font-size: 16px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.25px;
+            text-align: center;
+        }
+        
+        img {
+            border-radius: 20px;
+        }
+        
+        a.aione-button.medium.rounded.bg-blue-grey.bg-lighten-1 {
+            padding: 5px 15px;
+        }
+        /*   aione  header      */
+        
+        #aione_header {
+            position: fixed;
+            width: 16%;
+            height: 100vh;
+            background: #a43f49;
+            top: 0;
+            left: 4%;
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+        }
+        
+        #aione_header::-webkit-scrollbar {
+            display: none;
+        }
+        
+        #aione_header img {
+            width: 87%;
+            margin: 9px;
+            border-radius: 50%;
+        }
+        
+        #aione_header .my-name {
+            font-size: 26px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.25px;
+            margin-bottom: 0;
+        }
+        
+        #aione_header .aione-nav ul li a {
+            height: 70px;
+            line-height: 70px;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 700;
+            width: 100%;
+            color: #fff;
+            transition: all 0.5s;
+            border-top: 2px solid #fff;
+            background-color: #a33e49;
+        }
+        
+        #aione_header .aione-nav ul li a:hover {
+            background-color: #fff;
+            color: #a33e49;
+        }
+        
+        #aione_header .designation {
+            font-size: 13px;
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+        /*    main menu    */
+        
+        .main-menu {
+            margin: 15px 0;
+            border-bottom: 2px solid #fff;
+        }
+        
+        .main-menu ul .aione-social-icons.small.horizontal.dark-solid> li {
+            background: #00000057;
+            font-size: 15px;
+        }
+        
+        .main-menu .aione-social-icons a {
+            height: 35px;
+            width: 35px;
+            font-size: 15px;
+            background: #00000040;
+        }
+        
+        .aione-copyright {
+            color: #cfcdcd;
+        }
+        /*    aione page-content     */
+        
+        .aione-page-content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 73%;
+            padding: 3em;
+        }
+        /*  section about me    */
+        
+        .section_about p {
+            margin-top: 5px;
+            font-size: 16px;
+            color: #fff;
+            letter-spacing: 0.5px;
+            text-align: center;
+            margin: 30px;
+        }
+        
+        .gallery-item .gallery-icon p {
+            padding: 0 15px 25px 15px;
+        }
+        
+        .gallery-item .gallery-icon {
+            background-color: rgba(250, 250, 250, 0.1);
+        }
+        /*   section work    */
+        
+        .section_work p {
+            padding: 15px 50px;
+            margin-bottom: 20px;
+        }
+        
+        .aione-tabs.horizontal.theme-bold>.nav>.active {
+            border-bottom: none;
+            background: #a33e49;
+            color: #fff;
+            padding: 5px 25px;
+            border-radius: 20px;
+        }
+        
+        .aione-tabs.horizontal.theme-bold>.nav>.active:hover {
+            background: #a33e49;
+            box-shadow: 0px 1px 4px white;
+        }
+        
+        .aione-tabs.horizontal.theme-bold>.nav>:hover {
+            background: #a33e49;
+            color: #fff;
+            padding: 5px 25px;
+            border-radius: 20px;
+        }
+        
+        .aione-tabs.horizontal.theme-bold>.nav>* {
+            border-bottom: none;
+            margin-right: 0;
+            color: #984f57;
+            padding: 5px 25px;
+        }
+        /*   contact section    */
+        
+        .section_contact p {
+            padding: 20px 45px;
+        }
+        
+        form input {
+            background: #0404048a;
+            margin: 15px 25px;
+            border: 1px solid;
+        }
+        
+        form input:nth-child(1) {
+            width: 30%;
+            height: 22px;
+            padding: 5px;
+        }
+        
+        form input:nth-child(2) {
+            width: 30%;
+            height: 22px;
+            padding: 5px;
+        }
+        
+        form input:nth-child(4) {
+            width: 67%;
+            height: 22px;
+            padding: 5px;
+        }
+        
+        form input:nth-child(6) {
+            width: 67%;
+            height: 100px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="aione_wrapper" class="aione-wrapper layout-header-left aione-layout-wide color-scheme-default">
+        <div class="wrapper">
+            <div id="aione_header" class="aione-header light">
+                <div class="wrapper">
+
+                    <img src="http://frenify.com/envato/marketify/html/arlo/1/img/hero/img.jpg" alt="" class="mt-30">
+                    <h3 class="my-name">Sharry sohi</h3>
+                    <p class="designation">Web designer </p>
+
+                    <!--Main menu-->
+
+                    <div id="main_menu" class="main-menu mt-5">
+                        <nav id="aione_nav" class="aione-nav vertical">
+                            <ul id="aione_menu" class="aione-menu aione-align-center ">
+                                <li class="aione-nav-item level0">
+                                    <a href="#section1">
+                                        <span class="nav-item-text" data-hover="About me">About me</span></a>
+                                </li>
+                                <li class="aione-nav-item level0">
+                                    <a href="#section2">
+                                        <span class="nav-item-text" data-hover="What I'm good at?">What I'm good at?</span></a>
+                                </li>
+                                <li class="aione-nav-item level0">
+                                    <a href=" #section3">
+                                        <span class="nav-item-text" data-hover="My Work">My Work</span></a>
+                                </li>
+                                <li class="aione-nav-item level0"><a href="#section4"><span class="nav-item-text" data-hover="Contact Me" >Contact Me</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!--aione-social-icon-->
+
+                    <ul class="aione-social-icons small horizontal dark-solid p-15">
+                        <li class="facebook"><a href="https://www.facebook.com/oxosolutions" target="_blank"><span class="icon hover white"></span><span class="label">Facebook</span></a></li>
+                        <li class="twitter"><a href="https://twitter.com/oxosolutions" target="_blank"><span class="icon"></span><span class="label">Twitter</span></a></li>
+                        <li class="youtube"><a href="https://www.youtube.com/oxosolutions" target="_blank"><span class="icon"></span><span class="label">Youtube</span></a></li>
+                        <li class="github"><a href="https://github.com/oxosolutions" target="_blank"><span class="icon"></span><span class="label">Github</span></a></li>
+                    </ul>
+
+                    <!-- .aione-copyright -->
+
+                    <div id="aione_copyright" class="aione-copyright">
+                        <div class="wrapper p-25"> Copyright 2019 Aione framework </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--content Side-->
+
+        <div id="aione_main" class="aione-main fullwidth">
+            <div class="wrapper">
+                <div id="aione_content" class="aione-content">
+                    <div class="wrapper">
+                        <div id="aione_page_content" class="aione-page-content scroll-2">
+                            <div class="wrapper">
+                                <!--  section about me  -->
+                                <section class="section_about">
+                                    <h2 class="heading">About Me </h2>
+                                    <p class=" p-15 font-size-15">This is a Bootstrap v4.2.1 CSS Template for you. Edit and use this layout for your site. Updated on 21 May 2019 for repeated main menu HTML code.</p>
+
+                                    <div class="aione-row ar pv-50">
+                                        <div class="ac l50 p-10 animate fadeInLeft">
+                                            <img src="https://o.aolcdn.com/images/dims?quality=85&image_uri=https%3A%2F%2Fo.aolcdn.com%2Fimages%2Fdims%3Fcrop%3D5760%252C3840%252C0%252C0%26quality%3D85%26format%3Djpg%26resize%3D1600%252C1067%26image_uri%3Dhttp%253A%252F%252Fo.aolcdn.com%252Fhss%252Fstorage%252Fmidas%252Fb3f454047b0cf0c70c03a0b4ed8bb08e%252F206188047%252Fman-using-laptop-at-desk-in-home-office-picture-id748345779%26client%3Da1acac3e1b3290917d92%26signature%3D08117ae3154aabd530e4f8fb18d1ec79dad6a417&client=amp-blogside-v2&signature=49fbc2e7197808c972c238672cd71e1a57c0e76f" alt="">
+                                        </div>
+                                        <div class="ac l50 pv-15 ph-35 animate fadeInRight">
+                                            <h3 class="heading">Reflux HTML CSS Template</h3>
+                                            <p class="font-size-15">Donec tristique feugiat lacus, at sollicitudin nunc euismod sed. Mauris viverra, erat non sagittis gravida, elit dui mollis ante, sit amet eleifend purus ligula eget eros. Sed tincidunt quam vitae neque pharetra dignissim eget ut libero.</p>
+                                            <a href="#" class="aione-button medium rounded bg-blue-grey bg-lighten-1 "> Read More</a>
+                                        </div>
+                                    </div>
+                                    <div class="ar pv-40">
+                                        <div class="ac l50 pv-0 ph-0 ">
+                                            <h3 class="heading">Sed sagittis rhoncus velit</h3>
+                                            <p class=" font-size-15">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                            <a href="#" class="aione-button medium rounded bg-blue-grey bg-lighten-1 "> Read More</a>
+                                        </div>
+                                        <div class="ac l50 mt-20">
+                                            <img src="https://www.officeforstudents.org.uk/media/1118/new-office-for-students-research-to-focus-on-value-for-money.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <!---Whats good section-->
+
+                                <section class="whats_good_section ar p-30 bg-grey-lighten5 " id="section2">
+                                    <h2 class="heading"> What I'm good at?</h2>
+                                    <p class="ph-50 pv-30">Curabitur leo felis, rutrum vitae varius eu, malesuada a tortor. Vestibulum congue leo et tellus aliquam, eu viverra nulla semper. Nullam eu faucibus diam. Donec eget massa ante.</p>
+                                    <div class="gallery gallery-columns-2 margin landscape theme-pointer animation-zoom  pv-50">
+                                        <div class="gallery-item ">
+                                            <div class="gallery-icon ">
+                                                <h3>HTML5 & CSS3</h3>
+                                                <p class="pb-17">Work experience is essential for getting a job. Whether it's a short work placement or a longer internship, work experience is always viewed favourably by employers and can help you decide your future career.</p>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <div class="gallery-icon  ">
+                                                <h3>Creative Ideas</h3>
+                                                <p class="pb-17">Work experience is essential for getting a job. Whether it's a short work placement or a longer internship, work experience is always viewed favourably by employers and can help you decide your future career.</p>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-item ">
+                                            <div class="gallery-icon ">
+                                                <h3>Easy Customize</h3>
+                                                <p class="pb-17">Work experience is essential for getting a job. Whether it's a short work placement or a longer internship, work experience is always viewed favourably by employers and can help you decide your future career.</p>
+                                            </div>
+                                            <div class="gallery-caption"> </div>
+                                        </div>
+                                        <div class="gallery-item ">
+                                            <div class="gallery-icon  ">
+                                                <h3>Admin Dashboard</h3>
+                                                <p class="pb-17">Work experience is essential for getting a job. Whether it's a short work placement or a longer internship, work experience is always viewed favourably by employers and can help you decide your future career.</p>
+                                            </div>
+                                            <div class="gallery-caption"> </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <!--My Work section-->
+
+                                <section class="section_work aione-align-center" id="section3">
+                                    <h2 class="heading">My Work</h2>
+                                    <p>Aenean sollicitudin ex mauris, lobortis lobortis diam euismod sit amet. Duis ac elit vulputate, lobortis arcu quis, vehicula mauris.</p>
+                                    <div class="aione-tabs horizontal align-center theme-bold margin">
+                                        <div class="nav p-15">
+                                            <div data-target="#tab_all" class="active">All </div>
+                                            <div data-target="#tab_people" class="">People </div>
+                                            <div data-target="#tab_nature" class="">Nature </div>
+                                            <div data-target="#tab_animals" class="">Animals </div>
+                                        </div>
+                                        <div class="content">
+                                            <div id="tab_all" class="active ">
+                                                <div class="ar">
+                                                    <div class="ac l33 p-10"> <img src="https://templatemo.com/templates/templatemo_531_reflux/assets/images/portfolio-01.jpg" alt=""> </div>
+                                                    <div class="ac l33 p-10"> <img src="https://templatemo.com/templates/templatemo_531_reflux/assets/images/portfolio-02.jpg" alt=""> </div>
+                                                    <div class="ac l33 p-10"> <img src="https://templatemo.com/templates/templatemo_531_reflux/assets/images/portfolio-03.jpg" alt=""> </div>
+                                                    <div class="ac l33 p-10"> <img src="https://templatemo.com/templates/templatemo_531_reflux/assets/images/portfolio-04.jpg" alt=""> </div>
+                                                    <div class="ac l33 p-10"> <img src="https://templatemo.com/templates/templatemo_531_reflux/assets/images/portfolio-05.jpg" alt=""> </div>
+                                                    <div class="ac l33 p-10"> <img src="https://templatemo.com/templates/templatemo_531_reflux/assets/images/portfolio-06.jpg" alt=""> </div>
+                                                </div>
+                                            </div>
+                                            <div id="tab_people">
+                                                <div class="ar">
+                                                    <div class="ac l33 p-10"> <img src="https://templatemo.com/templates/templatemo_531_reflux/assets/images/portfolio-02.jpg" alt=""> </div>
+                                                    <div class="ac l33 p-10"> <img src="https://templatemo.com/templates/templatemo_531_reflux/assets/images/portfolio-06.jpg" alt=""> </div>
+                                                </div>
+                                            </div>
+                                            <div id="tab_nature" class="ar">
+                                                <div class="ac l33 p-10"> <img src="https://templatemo.com/templates/templatemo_531_reflux/assets/images/portfolio-01.jpg" alt=""> </div>
+                                                <div class="ac l33 p-10"> <img src="https://templatemo.com/templates/templatemo_531_reflux/assets/images/portfolio-03.jpg" alt=""> </div>
+                                            </div>
+                                            <div id="tab_animals" class="ar">
+                                                <div class="ac l33 p-10"> <img src="https://templatemo.com/templates/templatemo_531_reflux/assets/images/portfolio-03.jpg" alt=""> </div>
+                                                <div class="ac l33 p-10"> <img src="https://templatemo.com/templates/templatemo_531_reflux/assets/images/portfolio-02.jpg" alt=""> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <!--Contact Section-->
+
+                                <section class="section_contact aione-align-center p-15 pt-50" id="section4">
+                                    <h2 class="heading">Contact Me</h2>
+                                    <p>Fusce eget nibh nec justo interdum condimentum. Morbi justo ex, efficitur at ante ac, tincidunt maximus ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <form class="form ">
+                                        <input name="name" type="text" placeholder="Your Name" required="" maxlength="20" minlength="3">
+                                        <input name="e-mail" type="email" placeholder="Your E-mail" required="">
+                                        <br>
+                                        <input name="subject" type="text" placeholder="Subject" required="">
+                                        <br>
+                                        <input name="message" type="text" placeholder="Message">
+                                        <br> <a href="#" class="aione-button medium rounded bg-blue-grey bg-lighten-1 hover "> Send Message</a> </form>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.aioneframework.com/assets/js/vendor.min.js">
+    </script>
+    <script type="text/javascript" src="https://cdn.aioneframework.com/assets/js/aione.min.js">
+    </script>
+</body>
+
+</html>
