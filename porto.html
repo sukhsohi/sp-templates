@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Porto</title>
+    <title>Demo</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.aioneframework.com/assets/css/aione.min.css">
     <style>
         body {
@@ -21,12 +21,7 @@
             width: 90%;
             margin-bottom: 25px;
         }
-
-
-
         /*menu bar style*/
-
-
         
         .aione-header {
             border-bottom: 1px solid #abc;
@@ -71,12 +66,7 @@
             font-size: 22px;
             font-weight: 500;
         }
-
-
-
         /*slider section*/
-
-
         
         .slider_section h4,
         .slider_section h3 {
@@ -116,13 +106,13 @@
             background: #27292bd9;
         }
         
+        .slider_section .owl-carousel .owl-stage-outer {
+            height: 550px;
+        }
+        
         .owl-carousel .owl-dots.disabled,
         .owl-carousel .owl-nav.disabled {
             display: inline-block;
-        }
-        
-        .slider_section .owl-carousel .owl-stage-outer {
-            height: 550px;
         }
         
         .slider.aione .owl-nav .owl-prev {
@@ -155,13 +145,7 @@
         .slider.aione .owl-dots {
             display: none;
         }
-
-
-
-
         /* our services section */
-
-
         
         .our_services {
             background-color: #f5f5f5;
@@ -181,20 +165,12 @@
             margin-left: 31px;
             margin-top: 8px;
         }
-
-
-
-
-
         /* our portfolio */
-
-
         
         .our_portfolio .wrapper,
         .ac {
             position: relative;
             overflow: hidden;
-            padding: 0;
         }
         
         .our_portfolio .overlay {
@@ -259,15 +235,7 @@
             z-index: 2;
             transition-duration: .5s;
         }
-
-
-
-
-
-
         /* Testimonial */
-
-
         
         .section_testimonials {
             background: #f7f7f7;
@@ -353,15 +321,7 @@
             margin-bottom: 2px;
             color: #111;
         }
-
-
-
-
-
-
         /*   aione-footer  */
-
-
         
         .aione-footer {
             background-image: url(https://preview.oklerthemes.com/porto/7.6.0/img/parallax/parallax-8.jpg);
@@ -400,12 +360,16 @@
             margin-left: 3px;
         }
         
+        .aione-footer .wrapper {
+            position: relative;
+        }
+        
         .go {
             position: absolute;
-            left: 75%;
-            top: 47%;
+            right: 17.5%;
+            top: 41%;
             border: none;
-            width: 44px;
+            width: 80px;
             border-left: 1px solid #abc;
             height: 34px;
             outline: none;
@@ -422,15 +386,7 @@
             padding-top: 8px;
             font-size: 14px;
         }
-
-
-
-
-
-
         /*  copyright  */
-
-
         
         .aione-copyright {
             color: #ffffff;
@@ -442,53 +398,21 @@
             line-height: 24px;
             background: #000000e0;
         }
+        /*       media  query        */
         
-        .awesome {
-            animation: shadow 5s infinite;
-        }
-
-
-
-
-
-
-        /* key frames */
-
-        
-        @keyframes shadow {
-            0% {
-                text-shadow: 2px 3px 12px black;
-            }
-            25% {
-                text-shadow: 2px 3px 12px green;
-            }
-            50% {
-                text-shadow: 2px 3px 12px orange;
-            }
-            75% {
-                text-shadow: 2px 3px 12px blue;
-            }
-            100% {
-                text-shadow: 2px 3px 12px red;
+        @media only screen and (min-width: 993px) {
+            .our_portfolio .wrapper,
+            .ac {
+                padding: 0;
             }
         }
         
-        
-        
-         /*       media  query        */
-
-       		        @media only screen and (min-width: 993px) {
-                      .our_portfolio .wrapper , .ac  {
-          padding:0;
+        @media only screen and (max-width: 993px) {
+            .our_portfolio .wrapper,
+            .ac {
+                padding: 5px;
+            }
         }
-        }
-                @media only screen and (max-width: 993px) {
-                      .our_portfolio .wrapper , .ac {
-            padding:5px;
-        }
-        }
-
-
     </style>
 </head>
 <!-- End of Head Section -->
@@ -540,7 +464,7 @@
                                     <section class="slider_section">
                                         <div class="wrapper">
 
-                                            <div class="slider owl-carousel aione" id="slider-181197" data-nav-text="" data-items="1" data-margin="0" data-loop="true" data-autoplay="true">
+                                            <div class="slider owl-carousel aione" id="slider_1197" data-nav-text="" data-items="1" data-margin="0" data-loop="true" data-autoplay="true">
                                                 <div class="slider-item">
                                                     <img src="https://preview.oklerthemes.com/porto/7.6.0/img/slides/slide-corporate-7-2.jpg" alt="" />
                                                     <div class="text-caption">
@@ -791,6 +715,9 @@
                 </div>
             </div>
             <!-- .aione-main -->
+
+            <!--   footer-->
+
             <div id="aione_footer" class="aione-footer pv-30 mb-0">
                 <div class="wrapper ar mv-50">
                     <div class="ac l30 m34 s34">
@@ -829,7 +756,7 @@
             <!-- .aione-footer -->
             <div id="aione_copyright" class="aione-copyright">
                 <div class="wrapper aione-align-center">
-                    © Copyright 2019. All Rights Reserved.
+                    sukh © Copyright 2019. All Rights Reserved.
                 </div>
             </div>
             <!-- .aione-copyright -->
