@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aione Framework</title>
+<link rel="stylesheet" type="text/css" href="https://cdn.aioneframework.com/assets/css/aione.min.css">
+    <style>
+        body {
+            position: relative;
+            background: #f5f5f5;
+            font-size: 17px;
+            line-height: 1.5;
+        }
+        
+        section {
+            outline: none;
+        }
+        /*  top bar    */
+        
+        .top-bar {
+            position: relative;
+            background-color: #f4b31391;
+            width: 100%;
+            z-index: 2;
+        }
+        
+        .top-bar-left {
+            padding: 0 0 0 20px;
+        }
+        
+        .top-bar-left h3 {
+            font-weight: 900;
+            color: #333333;
+            text-shadow: 0 0 3px #fafafa;
+        }
+        
+        .top-bar-right {
+            padding: 0 20px 0 0;
+        }
+        /*  header    */
+        
+        .header {
+            z-index: 71;
+            position: sticky;
+            background: #0e0e0ed1;
+            width: 100%;
+            top: 0;
+        }
+        
+        .aione-nav.horizontal {
+            border-bottom: none;
+            box-shadow: none;
+        }
+        
+        span.nav-item-text {
+            margin: 0 10px;
+            text-shadow: 0 0 2px #ca9303;
+            color: #fff;
+            font-size: 17px;
+        }
+        /*   section_profile    */
+        
+        .section_profile {
+            position: relative;
+            background-image: url(https://www.themetrading.net/html/potato/images/slider/5.jpg);
+            top: -95px;
+            z-index: 1;
+        }
+        
+        .section_profile .ar {
+            background-color: #0000006e;
+        }
+        
+        .profile {
+            width: 30%;
+            margin: 0 auto;
+            background: #0000007a;
+            padding: 50px 0;
+        }
+        
+        .profile img {
+            height: 175px;
+        }
+        
+        .profile h2 {
+            text-shadow: 0 0 10px #b7903f;
+            color: #f6f6f5e0;
+            font-weight: 600;
+            font-family: none;
+        }
+        
+        .profile h4 {
+            color: #fff;
+            font-weight: 600;
+        }
+        
+        .aione-button {
+            padding: 10px 40px;
+            border-color: #de9613;
+            background-color: transparent;
+            color: #de9613;
+        }
+        
+        .aione-button:hover {
+            background-color: #de961394;
+            color: black;
+        }
+        /*   section about */
+        
+        .section_about {
+            margin: 50px 0;
+        }
+        
+        .section_about h3 {
+            font-weight: bold;
+        }
+        
+        .section_about h3 span {
+            font-weight: 300;
+        }
+        
+        .section_about h4 {
+            font-weight: 600;
+        }
+        
+        .section_about h4 span {
+            color: #f2b129;
+            text-shadow: 0 0 1px black;
+            font-weight: 400;
+        }
+        
+        .section_about .fa {
+            margin: 10px;
+            font-size: 26px;
+            height: 35px;
+            width: 35px;
+            background: #ffffff;
+            color: #dc9d18;
+            text-align: center;
+            border-radius: 50%;
+            border: 2px solid;
+            line-height: 1.4;
+        }
+        
+        .section_about .fa:hover {
+            color: #fff;
+            background: #e8b23f;
+        }
+        
+        .section_about .image {
+            position: relative;
+            top: -35px;
+        }
+
+        .section_about .image img{
+            width: 100%;
+        }
+        
+        .section_about .frame {
+            position: absolute;
+            border: 6px solid #b99234a3;
+            height: 82%;
+            width: 70%;
+            top: 7%;
+            left: 14%;
+        }
+
+
+
+        /*   section skill    */
+        
+        .section_skill {
+            background-image: url(http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2019/12/photographer.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            padding: 50px;
+            margin-top: 10%;
+        }
+        
+        .section_skill h4 {
+            color: #fff;
+        }
+        
+        .section_skill .wrapper {
+            color: #ffffffa1;
+        }
+        
+        .section_skill h2 {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            font-weight: bold;
+            text-shadow: 0 0 3px #b99234;
+            color: black;
+        }
+        
+        .section_skill .design-skill {
+            padding: 25px;
+        }
+        
+        .section_skill .coading-skill {
+            padding: 25px;
+        }
+        
+        .bar {
+            border: 1px solid;
+            position: relative;
+            background: #ffffff6e;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0px 0px 3px;
+            overflow: hidden;
+        }
+        
+        .bar div {
+            box-shadow: 0px 0px 3px;
+            border-radius: 3px;
+            animation-duration: 2s;
+        }
+        
+        .html:before {
+            content: "85%";
+            position: absolute;
+            font-weight: bold;
+            line-height: 1;
+            font-size: 11px;
+            color: #000;
+            height: 10px;
+            width: 20px;
+            left: 50%;
+            top: 2px;
+        }
+        
+        .css:before {
+            content: "70%";
+            position: absolute;
+            font-weight: bold;
+            line-height: 1;
+            font-size: 11px;
+            color: #000;
+            height: 10px;
+            width: 20px;
+            left: 50%;
+            top: 2px;
+        }
+        
+        .photo:before {
+            content: "78%";
+            position: absolute;
+            font-weight: bold;
+            line-height: 1;
+            font-size: 11px;
+            color: #000;
+            height: 10px;
+            width: 20px;
+            left: 50%;
+            top: 2px;
+        }
+        
+        .html {
+            height: 15px;
+            background-color: #dc9d18;
+            width: 85%;
+        }
+        
+        .css {
+            height: 15px;
+            background-color: #dc9d18;
+            width: 70%;
+        }
+        
+        .photo {
+            height: 15px;
+            background-color: #dc9d18;
+            width: 78%;
+        }
+        
+        .aione-social-icons {
+            margin: 0 0 0 0;
+        }
+        
+        .i-am {
+            position: relative;
+            left: 50%;
+            margin-left: -110px;
+        }
+        
+        .fa-whatsapp {
+            font-size: 32px;
+            color: #027f02;
+            position: fixed;
+            bottom: 40px;
+            right: 0;
+            z-index: 999;
+            width: 60px;
+            text-align: inherit;
+            padding-left: 11px;
+            background: #c39014;
+            line-height: 1.1;
+            text-shadow: 0 0 3px #f6f1f1;
+            border-radius: 15px 0 0 15px;
+            box-shadow: 0 0 8px black;
+        }
+
+
+
+
+        /*    portfolio     */
+        
+        .section_portfolio {
+            margin: 7% 0;
+        }
+        
+        #section_portfolio img {
+            height: 250px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        .tab-content {
+            margin: 45px 0 0 0;
+        }
+        
+        .tab-content .ac {
+            position: relative;
+        }
+        
+        .tab-content button {
+            position: absolute;
+            left: 10px;
+            background: #000000bd;
+            height: 92%;
+            width: 95%;
+            transform: scale(0);
+            opacity: 0;
+            font-size: 27px;
+            border: 1px solid #b99234;
+            transition-duration: .5s;
+            color: #f8f8f8;
+        }
+        
+        .tab-content .ac:hover button {
+            opacity: 0.8;
+            transition-duration: .5s;
+            transform: scale(1);
+        }
+        
+        .aione-tabs .nav .active {
+            border-radius: 22px;
+            border-bottom: none;
+            background: #cb971a;
+            color: #fff;
+        }
+        
+        .section_portfolio .nav div:hover {
+            box-shadow: 0 0 2px #cb971a;
+            border-radius: 22px;
+        }
+        
+        .aione-tabs.horizontal.theme-clean .nav {
+            border-bottom: 0;
+        }
+
+
+        /*   testimonial   */
+        .slider img{
+            height: 120px;
+        }
+
+        #section_testimonials {
+            padding: 12px 0;
+            background-color: #b0a8a87a;
+        }
+
+        #slider_id_33851965{
+            margin-bottom: 15px;
+        }
+
+        #slider_id_33851965 .aione-border {
+            border: 1px solid #cb971a;
+            background-color: #3b383857;
+        }
+
+
+
+        /*   contact form    */
+        
+        .section_contact {
+            height: 260px;
+            background: #8080803d;
+            margin: 12% 0;
+        }
+        
+        .section_contact h6 {
+            display: none;
+        }
+        
+        .contact-form input {
+            margin: 0 0 25px 0;
+            outline-color: #f4b31391;
+            border: 1px solid #e8b23f;
+        }
+        
+        .contact-form input:nth-child(1) {
+            margin-right: 6.5px;
+        }
+        
+        .section_contact .fa {
+            font-size: 30px;
+            text-align: end;
+            height: 50px;
+            width: 95%;
+        }
+        
+        .section_contact iframe {
+            position: relative;
+            height: 360px;
+            border: 1px solid #e8b23f;
+            box-shadow: 0 0 3px #e8b23f;
+            top: -100px;
+        }
+        
+        .section_contact .contact {
+            text-shadow: 0 0 1px #e8b23f;
+            color: #0000008c;
+        }
+        
+        .text {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-left: -124px;
+        }
+        
+        .text p {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0;
+        }
+        
+        .word {
+            position: absolute;
+            width: 220px;
+            opacity: 0;
+        }
+        
+        .letter {
+            display: inline-block;
+            position: relative;
+            float: left;
+            transform: translateZ(25px);
+            transform-origin: 50% 50% 25px;
+        }
+        
+        .letter.out {
+            transform: rotateX(90deg);
+            transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+        
+        .letter.behind {
+            transform: rotateX(-90deg);
+        }
+        
+        .letter.in {
+            transform: rotateX(0deg);
+            transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .wisteria {
+            color: #8e44ad;
+        }
+        
+        .belize {
+            color: #2980b9;
+        }
+        
+        .pomegranate {
+            color: #c0392b;
+        }
+        
+        .green {
+            color: #16a085;
+        }
+        
+        .midnight {
+            color: #2c3e50;
+        }
+        /*    copyright      */
+        
+        .aione_copyright {
+            background-color: #c39014;
+            color: #040404;
+            text-shadow: 0 0 2px #f6f6f6;
+            padding: 5px;
+        }
+        
+        .copyright-right {
+            text-align: right;
+        }
+        
+        .copyright-left {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="aione_wrapper" class="aione-wrapper page-home layout-header-top aione-layout-wide aione-theme-arcane">
+        <div class="wrapper">
+            <div class="top-bar ar">
+                <div class="top-bar-left ac l50 m100 s100">
+                    <h3 class="m-0">Demo</h3>
+                </div>
+                <div class="top-bar-right ac l50 m100 s100">
+                    <ul class="aione-social-icons small circle horizontal dark aione-align-right m-0">
+                        <li class="facebook"><a href="https://www.facebook.com/oxosolutions" target="_blank"><span class="icon"></span><span class="label">Facebook</span></a></li>
+                        <li class="twitter"><a href="https://twitter.com/oxosolutions" target="_blank"><span class="icon"></span><span class="label">Twitter</span></a></li>
+                        <li class="youtube"><a href="https://www.youtube.com/oxosolutions" target="_blank"><span class="icon"></span><span class="label">Youtube</span></a></li>
+                        <li class="linkedin"><a href="https://www.linkedin.com/company/oxo-solutions/" target="_blank"><span class="icon"></span><span class="label">Linkedin</span></a></li>
+                        <li class="github"><a href="https://github.com/oxosolutions" target="_blank"><span class="icon"></span><span class="label">Github</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header ar">
+                <div class="header-left ac l20 m100 s100 ">
+                    <img src="#" alt="img">
+                </div>
+                <div class="header-right ac l80 m100 s100 ">
+                    <nav id="aione_nav" class="aione-nav slide-down horizontal aione-align-center sticky">
+                        <ul id="aione_menu" class="aione-menu">
+                            <li class="aione-nav-item level0"><a href="#"><span class="nav-item-text" data-hover="Home">Home</span></a></li>
+                            <li class="aione-nav-item level0"><a href="#section_about"><span class="nav-item-text" data-hover="About">About</span></a></li>
+                            <li class="aione-nav-item level0"><a href="#"><span class="nav-item-text" data-hover="Products">Products</span></a></li>
+                            <li class="aione-nav-item level0"><a href="#section_skill"><span class="nav-item-text" data-hover="Skill's">Skill's</span></a></li>
+                            <li class="aione-nav-item level0"><a href="#"><span class="nav-item-text" data-hover="Resources">Resources</span></a></li>
+                            <li class="aione-nav-item level0"><a href="#"><span class="nav-item-text" data-hover="Career">Career</span></a></li>
+                            <li class="aione-nav-item level0"><a href="#section_portfolio"><span class="nav-item-text" data-hover="Portfolio">Portfolio</span></a></li>
+                            <li class="aione-nav-item level0"><a href="#section_contact"><span class="nav-item-text" data-hover="Contact">Contact</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="content">
+                <section class="section_profile" id="section_profile">
+                    <div class="ar pt-12p">
+                        <div class="profile aione-align-center">
+                            <img src="https://www.themetrading.net/html/potato/images/person.jpg" alt="img" class="aione-circle animate zoomInDown">
+                            <h2>NICOLE JEAN</h2>
+                            <div class="text mb-26">
+                                <p>I Am a</p>
+                                <p>
+                                    <span class="word wisteria">Designer.</span>
+                                    <span class="word belize">Developer.</span>
+                                    <span class="word pomegranate">Photographer.</span>
+                                    <span class="word green">Creative.</span>
+                                    <span class="word midnight">.</span>
+                                </p>
+                            </div>
+                            <a href="#" class="aione-button  square aione-border  " download> Download CV</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="section_about" id="section_about">
+                    <div class="ar ph-50">
+                        <div class="image ac l50 m100 s100 ph-50">
+                            <img src="https://cdn.fstoppers.com/wp-content/uploads/2014/05/john-schell-lifestyle-mens-fashion-chris-visionla-710x468.jpg" alt="1">
+                            <div class="frame animate tada "></div>
+                        </div>
+                        <div class="ac l50 m100 s100 ph-50">
+                            <h3 class="mb-40">About <span> me</span></h3>
+                            <h4>Hello! <span> I'M Nicole Jean.</span></h4>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                            <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                            <a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="section_skill" id="section_skill">
+                    <div class="ar ph-50 ph-50">
+                        <div class="ac l10 m100 s100 ">
+                            <h2 class="mt-25">My Skill's</h2>
+                        </div>
+                        <div class="ac l45 m100 s100">
+                            <h4 class="aione-align-center mb-25">Design Skills</h4>
+                            <div class="wrapper design-skill">
+                                CORAL DRAW
+                                <div class="bar">
+                                    <div class="html animate fadeInLeft">
+                                    </div>
+                                </div>
+                                ILLUSTRATOR
+                                <div class="bar">
+                                    <div class="css animate fadeInLeft">
+                                    </div>
+                                </div>
+                                PHOTOSHOP
+                                <div class="bar">
+                                    <div class="photo animate fadeInLeft">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ac l45 m100 s100 mh-0">
+                            <h4 class="aione-align-center mb-25">Coding Skills</h4>
+                            <div class="wrapper coading-skill">
+                                HTML5
+                                <div class="bar">
+                                    <div class="html animate fadeInLeft">
+                                    </div>
+                                </div>
+                                CSS3
+                                <div class="bar">
+                                    <div class="photo animate fadeInLeft">
+                                    </div>
+                                </div>
+                                JAVASCRIPT
+                                <div class="bar">
+                                    <div class="css animate fadeInLeft">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section_portfolio " id="section_portfolio">
+                    <div class="ar">
+                        <div class="aione-align-center">
+                            <div class="aione-tabs horizontal align-center theme-clean">
+                                <div class="nav">
+                                    <div data-target="#tab_all" class="active">All</div>
+                                    <div data-target="#tab_seo" class="">SEO </div>
+                                    <div data-target="#tab_webdesign" class="">Webdesign </div>
+                                    <div data-target="#tab_work" class="">Work </div>
+                                    <div data-target="#tab_wordpress" class="">Wordpress </div>
+                                </div>
+                                <div class="content tab-content">
+                                    <div id="tab_all" class="active ar ph-40">
+                                        <div class="ac l33 m50 s100  ">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-1.jpg" alt="img-1">
+                                            <button>link</button>
+                                        </div>
+                                        <div class="ac l33 m50 s100  ">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-2.jpg" alt="img-2">
+                                            <button>link</button>
+                                        </div>
+                                        <div class="ac l33 m50 s100  ">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-3.jpg" alt="img-3">
+                                            <button>link</button>
+                                        </div>
+                                        <div class="ac l33 m50 s100  ">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-4.jpg" alt="img-4">
+                                            <button>link</button>
+                                        </div>
+                                        <div class="ac l33 m50 s100  ">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-5.jpg" alt="img-5">
+                                            <button>link</button>
+                                        </div>
+                                        <div class="ac l33 m50 s100  ">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-6.jpg" alt="img-6">
+                                            <button>link</button>
+                                        </div>
+                                    </div>
+                                    <div id="tab_seo" class="ar ph-40  ">
+                                        <div class="ac l33 m50 s100">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-2.jpg" alt="img-2">
+                                            <button>link</button>
+                                        </div>
+                                        <div class="ac l33 m50 s100  ">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-4.jpg" alt="img-4">
+                                            <button>link</button>
+                                        </div>
+                                        <div class="ac l33 m50 s100  ">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-6.jpg" alt="img-6">
+                                            <button>link</button>
+                                        </div>
+                                    </div>
+                                    <div id="tab_webdesign" class="ar ph-40 ">
+                                        <div class="ac l33 m50 s100">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-1.jpg" alt="img-1">
+                                            <button>link</button>
+                                        </div>
+                                        <div class="ac l33 m50 s100">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-3.jpg" alt="img-3">
+                                            <button>link</button>
+                                        </div>
+                                        <div class="ac l33 m50 s100">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-5.jpg" alt="img-5">
+                                            <button>link</button>
+                                        </div>
+                                    </div>
+                                    <div id="tab_work" class="ar ph-40">
+                                        <div class="ac l33 m50 s100">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-2.jpg" alt="img-2">
+                                            <button>link</button>
+                                        </div>
+                                        <div class="ac l33 m50 s100">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-6.jpg" alt="img-3">
+                                            <button>link</button>
+                                        </div>
+                                        <div class="ac l33 m50 s100">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-6.jpg" alt="img-6">
+                                            <button>link</button>
+                                        </div>
+                                    </div>
+                                    <div id="tab_wordpress" class="ar ph-40">
+                                        <div class="ac l33 m50 s100">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-6.jpg" alt="img-6">
+                                            <button>link</button>
+                                        </div>
+                                        <div class="ac l33 m50 s100">
+                                            <img src="http://aione.oxosolutions.com/sukhjinder/wp-content/uploads/sites/58/2020/01/img-1.jpg" alt="img-1">
+                                            <button>link</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section_testimonials " id="section_testimonials">
+                    <h3 class="aione-align-center">Testimonials</h3>
+                    <div class="slider owl-carousel oxo" id="slider_id_33851965" data-nav-text="" data-items="3" data-loop="true" data-nav="true">
+
+                        <div class="owl-item active">
+                            <div class="p-20">
+                                <div class="ar aione-border pv-30 ph-10">
+                                    <div class="ac l40">
+                                        <div class="aione-align-center">
+                                            <img class="aione-circle" src="https://nour-theme.netlify.com/assets/images/clients/person-4.jpeg" alt="MR muna" >
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="ac l60">
+                                        <div class="mt-20">
+                                            <h5 class="font-weight-400 blue-grey darken-4">Lucky</h5>
+                                            <i class="font-size-15 blue-grey">Customer</i>
+                                        </div>
+                                        <div class="star-rating">
+                                            <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                            <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                            <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                            <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                        </div>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                    <div class="mt-10 ph-20">
+                                        <p class="font-size-15 line-height-23 blue-grey darken-3 font-weight-300">Designer have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="owl-item ">
+                            <div class="p-20">
+                                <div class="ar aione-border pv-30 ph-10">
+                                    <div class="ac l40">
+                                        <div class="aione-align-center">
+                                            <img class="aione-circle" src="https://nour-theme.netlify.com/assets/images/clients/person-3.jpeg" alt="MR muna" >
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="ac l60">
+                                        <div class="mt-20">
+                                            <h5 class="font-weight-400 blue-grey darken-4">john</h5>
+                                            <i class="font-size-15 blue-grey">Customer</i>
+                                        </div>
+                                        <div class="star-rating">
+                                            <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                            <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                            <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                            <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                        </div>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                    <div class="mt-10 ph-20">
+                                        <p class="font-size-15 line-height-23 blue-grey darken-3 font-weight-300">Designer have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="owl-item ">
+                            <div class="p-20">
+                                <div class="ar aione-border pv-30 ph-10">
+                                    <div class="ac l40">
+                                        <div class="aione-align-center">
+                                            <img class="aione-circle" src="https://nour-theme.netlify.com/assets/images/clients/person-1.jpeg" alt="MR muna">
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="ac l60">
+                                        <div class="mt-20">
+                                            <h5 class="font-weight-400 blue-grey darken-4">Raji</h5>
+                                            <i class="font-size-15 blue-grey">Customer</i>
+                                        </div>
+                                        <div class="star-rating">
+                                            <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                            <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                            <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                            <i class="fa fa-star-o orange lighten-2 font-size-20"></i>
+                                        </div>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                    <div class="mt-10 ph-20">
+                                        <p class="font-size-15 line-height-23 blue-grey darken-3 font-weight-300">Designer have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+<!--  section_contact  -->
+
+                    <section class="section_contact" id="section_contact">
+                        <div class="ar ph-50 pt-50">
+                            <h6>contact</h6>
+                            <div class="contact-map ac l30 m100 s100 animate fadeInLeft">
+
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27174.316949121312!2d74.84450401259764!3d31.63961014770066!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbf4a2b003bc90ce1!2sOXO%20IT%20SOLUTIONS%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1575366627959!5m2!1sen!2sin" width="100%" height="300" frameborder="0" allowfullscreen=""></iframe>
+
+                            </div>
+                            <div class="ac l35 m100 s100 pl-5p">
+                                <div class="contact-form ar aione-align-center animate pulse">
+                                    <input type="text" class="ac l49 m100 s100 " minlength="3" placeholder="First Name" required>
+                                    <input type="text" class="ac l49 m100 s100 " minlength="3" placeholder="Last Name" required>
+                                    <br>
+                                    <input type="email" class="ac l100 m100 s100" placeholder="E-mail" required>
+                                    <br>
+                                    <input type="text" class="ac l100 m100 s100" placeholder="Messsage" required>
+                                    <br>
+                                    <button value="submit">submit</button>
+                                </div>
+                            </div>
+                            <div class="ac l35 m100 s100 pl-5p animate fadeInRight">
+                                <div class="contact">
+                                    <div class="ar">
+                                        <div class="ac l20 m45 s45">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="ac l80 m55 s55">
+                                            Amritsar
+                                        </div>
+                                    </div>
+                                    <div class="ar">
+                                        <div class="ac l20 m45 s45">
+                                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="ac l80 m55 s55">
+                                            sukhsohi420@mail.com
+                                        </div>
+                                    </div>
+                                    <div class="ar">
+                                        <div class="ac l20 m45 s45">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="ac l80 m55 s55">
+                                            7517510751
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <a href="whatsapp.com"><i class="fa fa-whatsapp"></i></a>
+            </div>
+            <div class="aione_footer">
+
+            </div>
+            <div class="aione_copyright">
+                <div class="ar">
+                    <div class="copyright-left ac l50 m100 s100">
+                        ©2019 OXO Solutions® All rights reserved.
+                    </div>
+                    <div class="copyright-right ac l50 m100 s100">
+                        Designed by Sukhjinder
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var words = document.getElementsByClassName('word');
+    var wordArray = [];
+    var currentWord = 0;
+
+    words[currentWord].style.opacity = 1;
+    for (var i = 0; i < words.length; i++) {
+        splitLetters(words[i]);
+    }
+
+    function changeWord() {
+        var cw = wordArray[currentWord];
+        var nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
+        for (var i = 0; i < cw.length; i++) {
+            animateLetterOut(cw, i);
+        }
+
+        for (var i = 0; i < nw.length; i++) {
+            nw[i].className = 'letter behind';
+            nw[0].parentElement.style.opacity = 1;
+            animateLetterIn(nw, i);
+        }
+
+        currentWord = (currentWord == wordArray.length - 1) ? 0 : currentWord + 1;
+    }
+
+    function animateLetterOut(cw, i) {
+        setTimeout(function() {
+            cw[i].className = 'letter out';
+        }, i * 80);
+    }
+
+    function animateLetterIn(nw, i) {
+        setTimeout(function() {
+            nw[i].className = 'letter in';
+        }, 340 + (i * 80));
+    }
+
+    function splitLetters(word) {
+        var content = word.innerHTML;
+        word.innerHTML = '';
+        var letters = [];
+        for (var i = 0; i < content.length; i++) {
+            var letter = document.createElement('span');
+            letter.className = 'letter';
+            letter.innerHTML = content.charAt(i);
+            word.appendChild(letter);
+            letters.push(letter);
+        }
+
+        wordArray.push(letters);
+    }
+
+    changeWord();
+    setInterval(changeWord, 4000);
+</script>
+<script type="text/javascript" src="https://cdn.aioneframework.com/assets/js/vendor.min.js">
+</script>
+<script type="text/javascript" src="https://cdn.aioneframework.com/assets/js/aione.min.js">
+</script>
+
+</html>
