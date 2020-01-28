@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-skin-dark theme-color-56c8d2">
+
+<head>
+    <title>Shoe Shop</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.aioneframework.com/assets/css/aione.min.css">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOoFPjweUKumkAfLodfMbabb6WYns0gQG1ZFl8CW7XhlOfL-A_jQ
+" type="image/jpg">
+    <style>
+        body {
+            line-height: 1.2;
+        }
+        
+        #p div img {
+            width: 215px;
+        }
+        
+        h2 {
+            margin: 0;
+            padding: 25px;
+        }
+        
+        .top-bar {
+            background-image: linear-gradient(transparent, #bfbea9);
+            padding-left: 80px;
+            padding-bottom: 25px;
+        }
+        
+        .section2 {
+            background-image: linear-gradient(#c3c2af, white);
+        }
+        
+        .artical {
+            border: 2px solid;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: inset 0 0 9px #98a32a;
+        }
+        
+        .aione-section4 div .wrapper:hover,
+        .section5 div .wrapper:hover {
+            border: 1px solid;
+            border-top: none;
+            border-radius: 8px;
+        }
+        
+        .section5 div div {
+            text-align: center;
+        }
+        
+        .section5 .ac {
+            height: 325px;
+        }
+        
+        .aione-button {
+            display: none;
+        }
+        
+        .bar {
+            background: rgba(35, 56, 81, 1);
+            padding: 10px 20px;
+        }
+        
+        .first-wrapper {
+            position: relative;
+            background: rgba(254, 225, 91, 1);
+            padding: 12px;
+            border-radius: 5px;
+        }
+        
+        .first-wrapper i {
+            position: absolute;
+            top: 41%;
+        }
+        
+        .first-wrapper p {
+            padding-left: 27px;
+            margin: 0;
+        }
+        
+        .first-wrapper span {
+            position: absolute;
+            top: -7px;
+            right: 8px;
+            padding: 2px;
+            background: rgba(232, 40, 77, 1);
+            border-radius: 5px;
+            font-size: 11px;
+            color: white;
+        }
+        
+        .middle-wrapper {
+            background: #fbfbfb;
+            padding: 4px;
+            border-radius: 5px;
+            position: relative;
+        }
+        
+        .middle-wrapper p {
+            position: absolute;
+            top: 27%;
+            left: 12px;
+        }
+        
+        .middle-wrapper .fa-arrow-down {
+            position: absolute;
+            left: 36px;
+            font-size: 14px;
+            top: 13px;
+        }
+        
+        .middle-wrapper input {
+            position: relative;
+            left: 67px;
+            outline: 0;
+            border: 0;
+            height: 28px;
+            width: 78%;
+        }
+        
+        .middle-wrapper .fa-search {
+            position: absolute;
+            right: 16px;
+            top: 7px;
+            color: grey;
+            font-size: 22px;
+        }
+        
+        .next-wrapper ul {
+            position: relative;
+        }
+        
+        .next-wrapper .dropdown {
+            padding-top: 21px;
+            position: absolute;
+            color: white;
+            width: 60px;
+        }
+        
+        .next-wrapper .dropdown span {
+            position: absolute;
+            font-size: 26px;
+            top: 0;
+            color: white;
+            left: 16px;
+        }
+        
+        .next-wrapper .d-item {
+            padding-left: 86px;
+            position: absolute;
+            padding-top: 22px;
+            color: white;
+        }
+        
+        .next-wrapper .d-item span {
+            position: absolute;
+            font-size: 23px;
+            top: 0;
+            color: white;
+            left: 71%;
+        }
+        
+        .next-wrapper .d-item .count-zero {
+            position: absolute;
+            top: 0;
+            left: 118px;
+            background: red;
+            padding: 0 4px;
+            font-size: 13px;
+            border-radius: 7px;
+        }
+        
+        .next-wrapper .d-item1 {
+            position: absolute;
+            right: 0;
+            color: white;
+            padding-top: 22px;
+        }
+        
+        .next-wrapper .d-item1 span {
+            position: absolute;
+            color: white;
+            font-size: 27px;
+            top: 0;
+            right: 19px;
+        }
+        
+        .next-wrapper .d-item1 .count-zero {
+            position: absolute;
+            top: 1px;
+            padding: 0 4px;
+            right: 10px;
+            font-size: 13px;
+            background: red;
+            border-radius: 9px;
+        }
+        
+        .last-wrapper {
+            position: relative;
+            background: rgba(254, 225, 91, 1);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            height: 18px;
+        }
+        
+        .last-wrapper .fa-shopping-cart {
+            padding-left: 14px;
+            font-size: 29px;
+            top: 4px;
+            position: absolute;
+        }
+        
+        .last-wrapper .count-zero {
+            position: absolute;
+            top: -5px;
+            padding: 0 4px;
+            right: 10px;
+            background: red;
+            color: white;
+            border-radius: 9px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header-banner">
+        <div class="bar aione-wrapper p-20">
+            <div class="ar">
+                <div class="ac l20 m20 s100">
+                    <div class="first-wrapper">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                        <p class="dropdown mt-7">Shop by Category</p>
+                        <span class="label">Sale</span></div>
+                </div>
+                <div class="ac l40 m40 s100">
+                    <div class="middle-wrapper">
+                        <p class="dropdown">All</p><i class="fa fa-arrow-down" aria-hidden="true"></i>
+                        <input type="text" name="search" placeholder="Search here..." class="search-input">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="ac l20 m20 s100">
+                    <div class="next-wrapper">
+                        <ul>
+                            <li class="dropdown"><span><i class="fa fa-user" aria-hidden="true"></i></span> Account</li>
+                            <li class="d-item"><span><i class="fa fa-heart-o" aria-hidden="true"></i></span>Wishlist
+                                <span class="count-zero">0</span>
+                            </li>
+                            <li class="d-item1"><span><i class="fa fa-compass" aria-hidden="true"></i></span> Compare
+                                <span class="count-zero">0</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ac l20 m20 s100">
+                    <div class="last-wrapper">
+                        <p class="">0 item(s) - $0.00<span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                            <span class="count-zero">0</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-bar">
+        <div class="row">
+            <div class="column">
+                <img src="http://sandbox-halothemes1-com.3dcartstores.com/assets/images/banners/home-bottom-banner-3.jpg">
+                <img class="ph-25" src="http://sandbox-halothemes1-com.3dcartstores.com/assets/images/banners/home-bottom-banner-2.jpg">
+                <img src="http://sandbox-halothemes1-com.3dcartstores.com/assets/images/banners/home-bottom-banner-1.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="section3">
+        <div class="ar aione-align-center" style="width:80%; margin:0 auto">
+            <h2 class="aione-align-center">Articles</h2>
+            <div class="ac l33 m33 s100 ">
+                <div class="wrapper artical">
+                    <div class="ar">
+                        <div class="ac l30 m30">
+                            <img src="http://sandbox-halothemes1-com.3dcartstores.com/assets/images/thumbnails/sample-pro(3)_thumbnail.jpg">
+                        </div>
+                        <div class="ac l70 m70">
+                            <h4 id="h1">60% off <br><span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i></span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ac l33 m33 s100 ">
+                <div class="wrapper artical">
+                    <div class="ar">
+                        <div class="ac l30 m30">
+                            <img src="http://sandbox-halothemes1-com.3dcartstores.com/assets/images/thumbnails/sample-pro(16)_thumbnail.jpg">
+                        </div>
+                        <div class="ac l70 m70">
+                            <h4 id="h2">30% off<br><span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ac l33 m33 s100 ">
+                <div class="wrapper artical">
+                    <div class="ar">
+                        <div class="ac l30 m30">
+                            <img src="http://sandbox-halothemes1-com.3dcartstores.com/assets/images/thumbnails/sample-pro(9)_thumbnail.jpg">
+                        </div>
+                        <div class="ac l70 m70">
+                            <h4 id="h3">50% off <br><span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aione-section4 mv-5p" style="height: 225px;">
+        <div class="ar aione-align-center">
+            <div class="ac l25 m25 ph-3p">
+                <div class="wrapper ph-8p" id="shoe1">
+                    <img src="https://cdn.mec.ca/medias/sys_master/high-res/high-res/9016690409502/5062212-GRY50.jpg">
+                    <p class="pt-23">Cras in nunc non ipsum duo cursus ultrices est</p>
+                    <span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span>
+                    <h4>$300.00</h4>
+                    <a href="#" class="aione-button small rounded " id="btn1"> Add to cart</a>
+                </div>
+            </div>
+            <div class="ac l25 m25 ph-3p">
+                <div class="wrapper ph-8p" id="shoe2">
+                    <img src="https://cdn.mec.ca/medias/sys_master/high-res/high-res/9016690409502/5062212-GRY50.jpg">
+                    <p class="pt-23">Cras in nunc non ipsum duo cursus ultrices est</p>
+                    <span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span>
+                    <h4><s style="font-size: 15px">$300.00</s> $260.00</h4>
+                    <a href="#" class="aione-button small rounded " id="btn2"> Add to cart</a>
+                </div>
+            </div>
+            <div class="ac l25 m25 ph-3p">
+                <div class="wrapper ph-8p" id="shoe3">
+                    <img src="https://cdn.mec.ca/medias/sys_master/high-res/high-res/9016690409502/5062212-GRY50.jpg">
+                    <p class="pt-23">Cras in nunc non ipsum duo cursus ultrices est</p>
+                    <span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i></span>
+                    <h4>$300.00</h4>
+                    <a href="#" class="aione-button small rounded " id="btn3"> Add to cart</a>
+                </div>
+            </div>
+            <div class="ac l25 m25 ph-3p">
+                <div class="wrapper ph-8p" id="shoe4">
+                    <img src="https://cdn.mec.ca/medias/sys_master/high-res/high-res/9016690409502/5062212-GRY50.jpg">
+                    <p class="pt-23">Cras in nunc non ipsum duo cursus ultrices est</p>
+                    <span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span>
+                    <h4>$300.00</h4>
+                    <a href="#" class="aione-button small rounded " id="btn4"> Add to cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section5 ar pt-20" id="p">
+
+        <div class="ac l25 m33">
+
+            <div class="ph-8p">
+                <div class="wrapper ph-8p" id="shoe5">
+                    <a href=""><img src="https://m.media-amazon.com/images/I/715s7UqJPcL._AC_UL320_ML3_.jpg"></a>
+                    <p class="aione-align-center pt-20">Kraasa Men's Synthetic Leather Formal Shoes </p><span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span>
+                    <br>
+                    <p font-weight="bold" style="
+    color: brown;
+    font-size: 13px;
+    font-weight: bold;
+">FREE Delivery by Shoe shop</p>
+                    <h4 class="aione-align-center">$335</h4>
+                    <a href="#" class="aione-button small rounded " id="btn5"> Add to cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="ac l25 m33">
+
+            <div class="ph-8p">
+                <div class="wrapper ph-8p" id="shoe6">
+                    <a href=""><img src="https://m.media-amazon.com/images/I/718J9aaVlHL._AC_UL320_ML3_.jpg"></a>
+                    <p class="aione-align-center pt-30">Metro Men's Leather Formal Shoes</p><span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span>
+                    <br>
+                    <p font-weight="bold" style="
+    color: brown;
+    font-size: 13px;
+    font-weight: bold;
+">Delivery charges $20 </p>
+                    <h4 class="aione-align-center">$200 </h4>
+                    <a href="#" class="aione-button small rounded " id="btn6"> Add to cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="ac l25 m33">
+
+            <div class="ph-8p">
+                <div class="wrapper ph-8p" id="shoe7">
+                    <a href=""><img class="pb-38 pt-20" src="https://m.media-amazon.com/images/I/81Y7QHGmRZL._AC_UL320_ML3_.jpg"></a>
+                    <p class="aione-align-center">Clarks Men's Gilman Lace Formal Shoes </p><span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span>
+                    <br>
+                    <p font-weight="bold" style="
+    color: brown;
+    font-size: 13px;
+    font-weight: bold;
+">FREE Delivery by Shoe shop</p>
+                    <h4 class="aione-align-center">$400 </h4>
+                    <a href="#" class="aione-button small rounded " id="btn7"> Add to cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="ac l25 m33">
+
+            <div class="ph-8p">
+                <div class="wrapper ph-8p" id="shoe8">
+                    <a href=""><img class="pb-34 pt-29" src="https://m.media-amazon.com/images/I/71QH6nkv3AL._AC_UL320_ML3_.jpg"></a>
+                    <p class="aione-align-center">Emosis Mens
+                        <br>Loafer Shoe </p><span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span>
+                    <br>
+                    <p font-weight="bold" style="
+    color: brown;
+    font-size: 13px;
+    font-weight: bold;
+">Delivery charges $15 </p>
+                    <h4 class="aione-align-center">$340</h4>
+                    <a href="#" class="aione-button small rounded " id="btn8"> Add to cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ac l25 m33">
+
+            <div class="ph-8p">
+                <div class="wrapper ph-8p" id="shoe9">
+                    <a href=""><img class="pt-22 pb-10" src="https://m.media-amazon.com/images/I/616b0zHlYvL._AC_UL320_ML3_.jpg"></a>
+                    <p class="aione-align-center">Babes Women's Synthetic Bellies </p><span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span>
+                    <br>
+                    <p font-weight="bold" style="
+    color: brown;
+    font-size: 13px;
+    font-weight: bold;
+">FREE Delivery by Shoe shop</p>
+                    <h4 class="aione-align-center">$320</h4>
+                    <a href="#" class="aione-button small rounded " id="btn9"> Add to cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="ac l25 m33">
+
+            <div class="ph-8p">
+                <div class="wrapper ph-8p" id="shoe10">
+                    <a href=""><img class="pt-30 pb-26" src="https://m.media-amazon.com/images/I/61x5iq9Q71L._AC_UL320_ML3_.jpg"></a>
+                    <p class="aione-align-center">Footshez Suede Flat Bellie Sandals for Women & Girls</p><span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i></span>
+                    <br>
+                    <p font-weight="bold" style="
+    color: brown;
+    font-size: 13px;
+    font-weight: bold;
+">Delivery charges $20 </p>
+                    <h4 class="aione-align-center">$399 </h4>
+                    <a href="#" class="aione-button small rounded " id="btn10"> Add to cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="ac l25 m33">
+
+            <div class="ph-8p">
+                <div class="wrapper ph-8p" id="shoe11">
+                    <a href=""><img class="pt-16 pb-28" src="https://m.media-amazon.com/images/I/614Rd0gxD1L._AC_UL320_ML3_.jpg"></a>
+                    <p class="aione-align-center">FASHIMO Latest Attractive Look Women/Girls Casual Shoes </p><span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i></span>
+                    <br>
+                    <p font-weight="bold" style="
+    color: brown;
+    font-size: 13px;
+    font-weight: bold;
+">FREE Delivery by Shoe shop</p>
+                    <h4 class="aione-align-center">$400 </h4>
+                    <a href="#" class="aione-button small rounded " id="btn11"> Add to cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="ac l25 m33">
+
+            <div class="ph-8p">
+                <div class="wrapper ph-8p" id="shoe12">
+                    <a href=""><img class="pb-2" src="https://m.media-amazon.com/images/I/714w72fHX9L._AC_UL320_ML3_.jpg"> </a>
+                    <p class="aione-align-center">Footshez Women's Formal Shoes </p><span style="color:orange; font-size:15px; text-align: center;"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span>
+                    <br>
+                    <p font-weight="bold" style="
+    color: brown;
+    font-size: 13px;
+    font-weight: bold;
+">Delivery charges $20 </p>
+                    <h4 class="aione-align-center">$340</h4>
+                    <a href="#" class="aione-button small rounded " id="btn12"> Add to cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="ac l25 m33">
+
+            <div class="ph-8p">
+                <div class="wrapper ph-8p" id="shoe13">
+                    <a href=""><img class="pb-2" src="https://m.media-amazon.com/images/I/71BC8JQIdJL._AC_UL320_ML3_.jpg"></a>
+                    <p class="aione-align-center">skoodo Kids Casual Sports Shoes </p><span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i></span>
+                    <br>
+                    <p font-weight="bold" style="
+    color: brown;
+    font-size: 13px;
+    font-weight: bold;
+">Delivery charges $25 </p>
+                    <h4 class="aione-align-center">$140</h4>
+                    <a href="#" class="aione-button small rounded " id="btn13"> Add to cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="ac l25 m33">
+
+            <div class="ph-8p">
+                <div class="wrapper ph-8p" id="shoe14">
+                    <a href=""><img class="pv-20" src="https://m.media-amazon.com/images/I/51LerHlOOPL._AC_UL320_ML3_.jpg"></a>
+                    <p class="aione-align-center">PARAGON Boy kid's Formal Shoes </p><span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span>
+                    <p font-weight="bold" style="
+    color: brown;
+    font-size: 13px;
+    font-weight: bold;
+">FREE Delivery by Shoe shop</p>
+                    <h4 class="aione-align-center">$530</h4>
+                    <a href="#" class="aione-button small rounded " id="btn14"> Add to cart</a>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="ac l25 m33">
+            <div class="ph-8p">
+                <div class="wrapper ph-8p" id="shoe15">
+                    <a href=""><img class="pv-22" src="https://m.media-amazon.com/images/I/71r0wYVzKiL._AC_UL320_ML3_.jpg"></a>
+                    <p class="aione-align-center">TRASE SRV Parker Kids & Boys Sports Running Shoes </p><span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i> </span>
+                    <br>
+                    <p font-weight="bold" style="
+    color: brown;
+    font-size: 13px;
+    font-weight: bold;
+">Delivery charges $20 </p>
+                    <h4 class="aione-align-center">$240</h4>
+                    <a href="file:///home/oxo/Desktop/sukh/cart.html" class="aione-button small rounded " id="btn15"> Add to cart</a>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="ac l25 m33">
+            <div class="ph-8p">
+                <div class="wrapper ph-8p" id="shoe16">
+                    <a href=""><img class="pv-12" src="https://m.media-amazon.com/images/I/71cSa-wuJxL._AC_UL320_ML3_.jpg"> </a>
+                    <p class="aione-align-center">Essence kid's Vc 3101 High Top Synthetic Shoes - Black </p><span style="color:orange; font-size:15px"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span>
+                    <br>
+                    <p font-weight="bold" style="
+    color: brown;
+    font-size: 13px;
+    font-weight: bold;
+">FREE Delivery by Shoe shop</p>
+                    <h4 class="aione-align-center">$440</h4>
+                    <a href="file:///home/oxo/Desktop/sukh/cart.html" class="aione-button small rounded " id="btn16"> Add to cart</a>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
